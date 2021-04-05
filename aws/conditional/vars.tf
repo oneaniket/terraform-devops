@@ -1,0 +1,3 @@
+variable "HA" {
+    type = bool
+}
