@@ -5,6 +5,14 @@ provider "google" {
   zone        = "us-central1-a"
 }
 
+variable "zone"{
+  default = "us-central1-a"  
+}
+
+variable "machine_type"{
+  default = "n1-standard-1"
+}
+
 ##################################################
 ## Create 3 instnaces, Limitation on the naming ##
 ##################################################
