@@ -31,26 +31,26 @@ resource "google_compute_instance" "default" {
 ## Multiple instances with dynamic count value and reading the name from the list ##
 ####################################################################################
 
-resource "google_compute_instance" "default" {
-  count = length(var.instance_name_list)  
-  name         = var.instance_name_list[count.index]
-  machine_type = var.machine_type
-  zone         = var.zone
+# resource "google_compute_instance" "default" {
+#   count = length(var.instance_name_list)  
+#   name         = var.instance_name_list[count.index]
+#   machine_type = var.machine_type
+#   zone         = var.zone
 
-  tags = ["foo", "bar"]
+#   tags = ["foo", "bar"]
 
-  boot_disk {
-    initialize_params {
-      image = "debian-cloud/debian-9"
-    }
-  }
+#   boot_disk {
+#     initialize_params {
+#       image = "debian-cloud/debian-9"
+#     }
+#   }
 
-  network_interface {
-    network = "default"
+#   network_interface {
+#     network = "default"
 
-    access_config {
-      // Ephemeral IP
-    }
-  }
-}
+#     access_config {
+#       // Ephemeral IP
+#     }
+#   }
+# }
 
