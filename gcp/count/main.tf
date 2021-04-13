@@ -1,3 +1,10 @@
+provider "google" {
+  credentials = file("kelly-prod.json")
+  project     = "planar-maxim-304714"
+  region      = "us-central1"
+  zone        = "us-central1-a"
+}
+
 ##################################################
 ## Create 3 instnaces, Limitation on the naming ##
 ##################################################
